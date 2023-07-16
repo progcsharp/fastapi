@@ -10,5 +10,5 @@ router_calculator = APIRouter(prefix="/calculator", responses={404: {"descriptio
 
 @router_calculator.get("/")
 async def calculator(price: float, date: d, cargo_type: str):
-    rate = await get_rate(date, cargo_type)
+    rate = await get_rate(date, cargo_type.lower())
     return {"price": price*rate.rate}

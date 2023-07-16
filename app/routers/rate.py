@@ -14,7 +14,7 @@ async def rate_create(request: Request):
     for date in dates:
         for rate in request[date]:
             data["date"] = date
-            data["cargo_type"] = rate["cargo_type"]
+            data["cargo_type"] = rate["cargo_type"].lower()
             data["rate"] = rate["rate"]
             created = await create_rate(data)
     return {"created": created}

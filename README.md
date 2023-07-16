@@ -1,6 +1,4 @@
-# fastapi
-1 docke build
-2 docker rum name
+# Fastapi
 
 
 ## Сервис по расчету стоимости груза с учетом актуального тарифа
